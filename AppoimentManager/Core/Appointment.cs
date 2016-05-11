@@ -10,37 +10,29 @@ namespace AppoimentManager.Core
     public class Appointment
     {
         private DateTime date = DateTime.Now;
-        private int price;
-        private AppointmentType type = AppointmentType.WithoutAcrylic;
+       
+        private List<Service> services;
         private string technicalCode;
 
-        public Appointment(DateTime time, int price, AppointmentType type, string technicalCode) 
+        public Appointment(DateTime time, List<Service> services , string technicalCode) 
         {
-            this.time = time;
-            this.price = price;
-            this.type = type;
+            this.date = time;
+            this.services = services;
             this.technicalCode = technicalCode;
         }
                 
-        [XmlAttribute("Price")]
-        public int Price
-        {
-            get { return this.price; }
-            set { this.price = value; }
-        }
-
-        [XmlAttribute("Date")]
+        [XmlAttribute("date")]
         public DateTime Date
         {
             get { return this.date; }
             set { this.date = value; }
         }
 
-        [XmlAttribute("type")]
-        public AppointmentType Type
+        [XmlAttribute("services")]
+        public List<Service> Services
         {
-            get { return this.type; }
-            set { this.type = value; }
+            get { return this.services; }
+            set { this.services = value; }
         }
 
     }

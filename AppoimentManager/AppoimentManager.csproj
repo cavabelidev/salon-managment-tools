@@ -64,6 +64,7 @@
     <Compile Include="Core\DataLoader.cs" />
     <Compile Include="Core\Historic.cs" />
     <Compile Include="Core\Serialization\XmlSerialization.cs" />
+    <Compile Include="Core\Service.cs" />
     <Compile Include="Core\Technical.cs" />
     <Compile Include="Core\Employees.cs" />
     <Compile Include="MainWindow.xaml.cs">
